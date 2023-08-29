@@ -9,6 +9,8 @@ import { fetchSearch, searchText } from '../../store/slices/searchSlice';
 const Header = () => {
   const [openPopup, setOpenPopup] = useState(false)
 
+  const [hiddenSearch, isHiddenSearch] = useState(true)
+
   const dispatch = useDispatch();
   const { genres } = useSelector((state) => state.genresData);
 
@@ -27,6 +29,11 @@ const Header = () => {
     }
   }, [text])
 
+
+  const handleSearchBTN = () => {
+    isHiddenSearch(true)
+  }
+
   return (
     <header className="header">
       <div className="logo">
@@ -38,13 +45,13 @@ const Header = () => {
         })}
       </nav>
       <div className="search">
+        <button></button>
         <input placeholder="Search" value={text} onChange={(e) => dispatch(searchText(e.target.value))}/>
         <div>
           {
             openPopup ? <Search /> : ''
           }
         </div>
-        {/* <button>Search</button> */}
       </div>
     </header>
   );
