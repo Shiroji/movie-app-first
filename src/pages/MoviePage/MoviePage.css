@@ -1,0 +1,27 @@
+.detM {
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+
+.imgBlock {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.imgBlock img {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.filmInfoImg img {
+  width: 250px;
+}
+
+.movieInfoDesc h2 {
+  text-align: center;
+}
+
+.compN {
+  color: white;
+}
